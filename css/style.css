@@ -1,0 +1,119 @@
+:root {
+    --fuenteHeading: 'PT Sans', sans-serif;
+    --fuenteParrafo: 'Open Sans', sans-serif;
+
+    --primario: #784D3C;
+    --blanco: #ffffff;
+    --negro: #000000; 
+}
+
+html {
+    box-sizing: border-box;/*sirve para que el border o el pading no afecten el ancho*/
+    font-size: 62.5%;/*1 rem = 10px*/
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--fuenteParrafo);
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+/*Globales*/
+.contenedor {
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--fuenteHeading);
+}
+h1 {
+    font-size: 4.8rem;
+}
+h2 {
+    font-size: 4rem;
+}
+h3 {
+    font-size: 3.2rem;
+}
+h4 {
+    font-size: 2.8rem;
+}
+img {
+    max-width: 100%;
+}
+/*Utilidades*/
+.no-margin {
+    margin: 0;
+}
+.no-padding {
+    padding: 0;
+}
+.centrar-texto {
+    text-align: center;
+}
+
+/*Header*/
+.header {/*La imagen del header*/
+    background-image: url(../img/banner.jpg);
+    height: 60rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;/*el primer valor lo centra horizontalmente y el segundo verticalmente */ 
+}
+.header__texto {
+    text-align: center;
+    color: var(--blanco);
+    margin-top: 5rem;
+}
+
+@media (min-width: 768px) { /*Centramos mas el texto*/
+    .header__texto {
+        margin-top: 15rem;
+    }
+}
+
+    @media (min-width: 768px) {
+        .barra {
+            display: flex;
+            justify-content: space-between;/*Separo la barra de navegacion del logo*/
+            align-items: center;
+        }
+    }
+
+    .logo {
+        color: var(--blanco);
+    }
+
+    .logo__nombre {
+        font-weight: 400;
+    }
+
+    .logo__bold {
+        font-weight: 700;
+    }
+
+    @media (min-width: 768px) { /*Sirve para acomodar veticalmen la navegacion en tablets y pc*/
+       .navegacion {
+        display: flex;
+        gap: 2rem;
+       }
+    }
+
+   .navegacion__enlace {
+    display: block;
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--blanco);
+   }
+
+   
